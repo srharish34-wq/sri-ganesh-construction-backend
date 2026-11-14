@@ -7,7 +7,7 @@ import {
 
 // Roles an admin can create through the API. The Super Admin is created
 // only by the seed script, so nobody can create another one through the app.
-const creatableRole = z.enum([ROLES.ENGINEER, ROLES.WORKER, ROLES.CUSTOMER]);
+const creatableRole = z.enum([ROLES.ENGINEER, ROLES.CUSTOMER]);
 
 const addressBody = z.object({
   line1: optional(z.string().trim().max(200)),
